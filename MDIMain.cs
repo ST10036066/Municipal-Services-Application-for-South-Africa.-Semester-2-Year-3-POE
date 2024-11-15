@@ -3,166 +3,149 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Municipal_Services_Application_for_South_Africa
 {
     /// <summary>
-    /// this mdi is used for  for the menu items on top of the form such as navigating to different forms and exiting application
+    /// Main MDI container for the application.
+    /// Provides a MenuStrip for navigation between different forms
+    ///.
     /// </summary>
     public partial class MDIMain : Form
     {
-        private int childFormNumber = 0;
-
         public MDIMain()
         {
             InitializeComponent();
-            this.IsMdiContainer = true;
-            this.WindowState = FormWindowState.Maximized;
-            this.Load += new EventHandler(MDIMain_Load);
+            this.IsMdiContainer = true; // Enable MDI container.
+            this.WindowState = FormWindowState.Maximized; // Maximize the main window.
+            this.Load += MDIMain_Load; // Register the Load event.
         }
 
-        private void ShowNewForm(object sender, EventArgs e)
-        {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Window " + childFormNumber++;
-            childForm.Show();
-        }
-
-        private void OpenFile(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
-        }
-
-        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = saveFileDialog.FileName;
-            }
-        }
-
-        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
-
-        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
-        }
-
-        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.Cascade);
-        }
-
-        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileVertical);
-        }
-
-        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileHorizontal);
-        }
-
-        private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.ArrangeIcons);
-        }
-
-        private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form childForm in MdiChildren)
-            {
-                childForm.Close();
-            }
-        }
-
+        /// <summary>
+        /// Initializes the MenuStrip with menu items for navigation.
+        /// </summary>
         private void MDIMain_Load(object sender, EventArgs e)
         {
             InitializeMenuStrip();
         }
+
+        /// <summary>
+        /// Configures the MenuStrip and its menu items.
+        /// </summary>
         private void InitializeMenuStrip()
         {
-            // Reference the existing MenuStrip
-            MenuStrip menuStrip = navigationMenuStrip;
+            // Create a MenuStrip
+            MenuStrip navigationMenuStrip = new MenuStrip();
 
-            // Add "Open MainMenu" menu item
-            ToolStripMenuItem openMainMenu = new ToolStripMenuItem("Open MainMenu", null, OpenMainMenu);
-            menuStrip.Items.Add(openMainMenu);
+            // Add menu items
+            navigationMenuStrip.Items.Add(CreateMenuItem("Local Events and Announcements", OpenLocalEventsAndAnnouncements));
+            navigationMenuStrip.Items.Add(CreateMenuItem("Saving Events and Announcement", OpenSavingEventsAndAnnouncement));
+            navigationMenuStrip.Items.Add(CreateMenuItem("Main Menu", OpenMainMenu));
+            navigationMenuStrip.Items.Add(CreateMenuItem("Report Issues", OpenReportIssues));
+            navigationMenuStrip.Items.Add(CreateMenuItem("Service Request Status", OpenServiceReqStatus));
 
-            // Add "Open ReportIssues" menu item
-            ToolStripMenuItem openReportIssues = new ToolStripMenuItem("Open ReportIssues", null, OpenReportIssues);
-            menuStrip.Items.Add(openReportIssues);
+            // Add the MenuStrip to the form
+            this.MainMenuStrip = navigationMenuStrip;
+            this.Controls.Add(navigationMenuStrip);
+        }
 
-            // Add "Open SavingAnnouncement" menu item
-            ToolStripMenuItem openSavingAnnouncement = new ToolStripMenuItem("Open SavingAnnouncement", null, OpenSavingAnnouncement);
-            menuStrip.Items.Add(openSavingAnnouncement);
+        /// <summary>
+        /// Helper method to create a ToolStripMenuItem with a click event.
+        /// </summary>
+        private ToolStripMenuItem CreateMenuItem(string text, EventHandler onClick)
+        {
+            return new ToolStripMenuItem(text, null, onClick);
+        }
 
-            // Add "Exit" menu item
-            ToolStripMenuItem exitMenuItem = new ToolStripMenuItem("Exit", null, ExitToolsStripMenuItem_Click);
-            menuStrip.Items.Add(exitMenuItem);
+        /// <summary>
+        /// Closes the currently active child form.
+        /// </summary>
+        private void CloseActiveChildForm()
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
+        }
 
-            // Set the MenuStrip to the form
-            this.MainMenuStrip = menuStrip;
+        /// <summary>
+        /// Opens the Local Events and Announcements form.
+        /// In order to fullfil the municipal services for the community, this form 
+        /// Display upcoming local events and announcements in an aesthetically pleasing manner.
+        /// Implement a search functionality allowing users to efficiently find events based on categories and dates. 
+        ///Utilise advanced data structures, such as sorted dictionaries, to optimise event organisation
+        ///
+        /// The LocalEventsAndAnnouncements class has a special requirement. It requirs a parameter(queue)
+        ///of events (Queue<Dictionary<DateTime, string>>) to work properly. 
+        /// This queue is used inside the form to show or manage event data.
+        /// </summary>
+        private void OpenLocalEventsAndAnnouncements(object sender, EventArgs e)
+        {
+            
+            // Create a queue and optionally populate it with data
+            Queue<Dictionary<DateTime, string>> eventQueue = new Queue<Dictionary<DateTime, string>>();
+
+            // Optionally, add sample data to the queue
+            eventQueue.Enqueue(new Dictionary<DateTime, string> { { DateTime.Now, "Sample Event" } });
+
+            // Pass the queue to the constructor
+            LocalEventsAndAnnouncements localEventsForm = new LocalEventsAndAnnouncements(eventQueue)
+            {
+                MdiParent = this
+            };
+
+            // Show the form if needed
+            localEventsForm.Show();
 
         }
 
+        /// <summary>
+        /// Opens the Saving Events and Announcement form.
+        /// 
+        /// </summary>
+        private void OpenSavingEventsAndAnnouncement(object sender, EventArgs e)
+        {
+            CloseActiveChildForm();
+            SavingEventsandAnnoucement savingEventsForm = new SavingEventsandAnnoucement { MdiParent = this };
+            savingEventsForm.Show();
+        }
+
+        /// <summary>
+        /// Opens the Main Menu form.
+        /// </summary>
         private void OpenMainMenu(object sender, EventArgs e)
         {
-            MainMenuForm mainMenuForm = new MainMenuForm();
-            mainMenuForm.MdiParent = this;
+            CloseActiveChildForm();
+            MainMenuForm mainMenuForm = new MainMenuForm { MdiParent = this };
             mainMenuForm.Show();
         }
 
+        /// <summary>
+        /// Opens the Report Issues form.
+        /// </summary>
         private void OpenReportIssues(object sender, EventArgs e)
         {
-            ReportIssuesForm reportIssuesForm = new ReportIssuesForm();
-            reportIssuesForm.MdiParent = this;
+            CloseActiveChildForm();
+            ReportIssuesForm reportIssuesForm = new ReportIssuesForm { MdiParent = this };
             reportIssuesForm.Show();
         }
 
-        private void OpenSavingAnnouncement(object sender, EventArgs e)
+        /// <summary>
+        /// Opens the Service Request Status form.When choosing "Service Request Status," create a Windows Form with the following features: 
+        /// Display a well-organised list of submitted service requests, including their status.
+        /// Allow users to track the progress of their service requests using unique identifiers.
+        /// </summary>
+        private void OpenServiceReqStatus(object sender, EventArgs e)
         {
-            SavingEventsandAnnoucement savingAnnouncementForm = new SavingEventsandAnnoucement();
-            savingAnnouncementForm.MdiParent = this;
-            savingAnnouncementForm.Show();
+            CloseActiveChildForm();
+            ServiceReqStatusForm serviceReqStatusForm = new ServiceReqStatusForm { MdiParent = this };
+            serviceReqStatusForm.Show();
         }
-
-       
-         
-
     }
 }

@@ -59,7 +59,10 @@ namespace Municipal_Services_Application_for_South_Africa
 
         private void ToServiceReqStatusButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Oops.Service Request Status services is under construction. It will be available soon :).");
+           
+            var ServiceReqStatatusForm = new ServiceReqStatusForm();
+            ServiceReqStatatusForm.Show();
+            this.Hide();
         }
 
         private void mainMenuGreetDescrp_Click(object sender, EventArgs e)

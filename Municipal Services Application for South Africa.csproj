@@ -104,6 +104,12 @@
     <Compile Include="SavingEventsandAnnoucement.Designer.cs">
       <DependentUpon>SavingEventsandAnnoucement.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServiceReqStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceReqStatusForm.Designer.cs">
+      <DependentUpon>ServiceReqStatusForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LocalEventsAndAnnouncements.resx">
       <DependentUpon>LocalEventsAndAnnouncements.cs</DependentUpon>
     </EmbeddedResource>

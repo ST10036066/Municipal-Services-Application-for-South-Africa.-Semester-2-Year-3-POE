@@ -16,7 +16,7 @@ namespace Municipal_Services_Application_for_South_Africa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenuForm());
+            Application.Run(new MDIMain());
         }
     }
 }
