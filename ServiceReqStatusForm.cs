@@ -16,5 +16,10 @@ namespace Municipal_Services_Application_for_South_Africa
         {
             InitializeComponent();
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

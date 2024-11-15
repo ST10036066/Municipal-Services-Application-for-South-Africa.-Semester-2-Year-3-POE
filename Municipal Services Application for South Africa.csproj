@@ -135,6 +135,9 @@
     <EmbeddedResource Include="SavingEventsandAnnoucement.resx">
       <DependentUpon>SavingEventsandAnnoucement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ServiceReqStatusForm.resx">
+      <DependentUpon>ServiceReqStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
