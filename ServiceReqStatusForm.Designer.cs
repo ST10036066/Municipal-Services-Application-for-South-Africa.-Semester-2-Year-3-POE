@@ -45,10 +45,10 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -96,8 +96,8 @@
             this.tableLayoutPanel1.Controls.Add(this.richTextBox1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.listBox1, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.richTextBox2, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.listBox2, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 3, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -173,10 +173,10 @@
             this.label5.Font = new System.Drawing.Font("Lucida Bright", 8.25F);
             this.label5.Location = new System.Drawing.Point(462, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 114);
+            this.label5.Size = new System.Drawing.Size(146, 72);
             this.label5.TabIndex = 14;
-            this.label5.Text = "STEP 4\r\nWhat to Do:\r\n If you have any photos or documents related to the issue, \r" +
-    "\nclick the “Attach Photo or Documents” button to attach files.\r\n";
+            this.label5.Text = "STEP 4\r\nWhat to Do:\r\nChoose a date when you would like the service request fullfi" +
+    "lled.\r\n";
             // 
             // label6
             // 
@@ -222,11 +222,11 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.CadetBlue;
             this.label9.Font = new System.Drawing.Font("Lucida Bright", 8.25F);
-            this.label9.Location = new System.Drawing.Point(462, 151);
+            this.label9.Location = new System.Drawing.Point(462, 158);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(165, 28);
+            this.label9.Size = new System.Drawing.Size(165, 14);
             this.label9.TabIndex = 19;
-            this.label9.Text = "Select files to support your service needs (optional)";
+            this.label9.Text = "Click on the calendar below";
             // 
             // label10
             // 
@@ -278,17 +278,6 @@
             this.richTextBox2.TabIndex = 23;
             this.richTextBox2.Text = "";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Lucida Bright", 8.25F);
-            this.button1.Location = new System.Drawing.Point(462, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 88);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Attach Photos or Documents";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // listBox2
             // 
             this.listBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -331,6 +320,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = resources.GetString("label1.Text");
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(462, 191);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(165, 20);
+            this.dateTimePicker1.TabIndex = 26;
+            // 
             // ServiceReqStatusForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,7 +365,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
