@@ -287,36 +287,6 @@ namespace Municipal_Services_Application_for_South_Africa
     }
 }
 
-//// Get input values
-//string location = LocationInputTextBox.Text;
-//string category = CategorySelectionListBox.SelectedItem.ToString();
-//string description = DescriptionBoxRichTextBox.Text;
-//// string mediaFilePath = MediaAttachments.FileName;
-
-////using the method for input validation(Line 174)
-//ValidateInput(location, category, description);
-
-//// Convert file paths to FileAttachment objects
-//foreach (var filePath in FileAttachmentsList) // Replace with your actual list of file paths
-//{
-//    // Extract file name from the FilePath property of the FileAttachment object
-//    string fileName = Path.GetFileName(filePath.FilePath);
-
-//    // Create a new FileAttachment object and add it to the list (if needed)
-//    //MediaAttachments.Add(new FileAttachment(fileName, fileAttachments.FilePath, new FileInfo(fileAttachments.FilePath).Length));
-
-//    MediaAttachments.Add(new FileAttachment(fileName, filePath.FilePath, new FileInfo(fileName).Length));
-//}
-
-//// Create new report and add to the list (ensure all parameters are passed)
-//IssueReport newReport = new IssueReport(
-//    location,        // Location 
-//    category,        // Category
-//    description,     // Description
-//    MediaAttachments // the MediaAttachments list
-//);
-
-//ReportedIssues.Add(newReport);
 
 //-------------------------------------------------------------------------------------------------------------------------------
 //--------------------------------------END OF CODE------------------------------------------------------------------------------

@@ -42,16 +42,22 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.RequestLocationTB = new System.Windows.Forms.RichTextBox();
+            this.ServiceReqCategorySelectionListBox = new System.Windows.Forms.ListBox();
+            this.RequestDescriptionTb = new System.Windows.Forms.RichTextBox();
+            this.ReqStatusListBox = new System.Windows.Forms.ListBox();
+            this.ReqDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SubmitRequestButton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -93,11 +99,11 @@
             this.tableLayoutPanel1.Controls.Add(this.label8, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.label9, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label10, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.richTextBox1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.listBox1, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.richTextBox2, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.listBox2, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.RequestLocationTB, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.ServiceReqCategorySelectionListBox, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.RequestDescriptionTb, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.ReqStatusListBox, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.ReqDateTimePicker, 3, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -240,22 +246,22 @@
             this.label10.TabIndex = 20;
             this.label10.Text = "Has your service request been addressed? Choose the status from the list";
             // 
-            // richTextBox1
+            // RequestLocationTB
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 191);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(153, 96);
-            this.richTextBox1.TabIndex = 21;
-            this.richTextBox1.Text = "";
+            this.RequestLocationTB.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.RequestLocationTB.Location = new System.Drawing.Point(3, 191);
+            this.RequestLocationTB.Name = "RequestLocationTB";
+            this.RequestLocationTB.Size = new System.Drawing.Size(153, 96);
+            this.RequestLocationTB.TabIndex = 21;
+            this.RequestLocationTB.Text = "";
             // 
-            // listBox1
+            // ServiceReqCategorySelectionListBox
             // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.listBox1.Font = new System.Drawing.Font("Lucida Bright", 8.25F);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 14;
-            this.listBox1.Items.AddRange(new object[] {
+            this.ServiceReqCategorySelectionListBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ServiceReqCategorySelectionListBox.Font = new System.Drawing.Font("Lucida Bright", 8.25F);
+            this.ServiceReqCategorySelectionListBox.FormattingEnabled = true;
+            this.ServiceReqCategorySelectionListBox.ItemHeight = 14;
+            this.ServiceReqCategorySelectionListBox.Items.AddRange(new object[] {
             "Water & Sanitation",
             "Infrustracture",
             "Transportation",
@@ -263,28 +269,28 @@
             "Health ",
             "Education",
             "Public Safety"});
-            this.listBox1.Location = new System.Drawing.Point(162, 191);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 88);
-            this.listBox1.TabIndex = 22;
+            this.ServiceReqCategorySelectionListBox.Location = new System.Drawing.Point(162, 191);
+            this.ServiceReqCategorySelectionListBox.Name = "ServiceReqCategorySelectionListBox";
+            this.ServiceReqCategorySelectionListBox.Size = new System.Drawing.Size(120, 88);
+            this.ServiceReqCategorySelectionListBox.TabIndex = 22;
             // 
-            // richTextBox2
+            // RequestDescriptionTb
             // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.richTextBox2.Font = new System.Drawing.Font("Lucida Bright", 8.25F);
-            this.richTextBox2.Location = new System.Drawing.Point(321, 191);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(135, 96);
-            this.richTextBox2.TabIndex = 23;
-            this.richTextBox2.Text = "";
+            this.RequestDescriptionTb.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.RequestDescriptionTb.Font = new System.Drawing.Font("Lucida Bright", 8.25F);
+            this.RequestDescriptionTb.Location = new System.Drawing.Point(321, 191);
+            this.RequestDescriptionTb.Name = "RequestDescriptionTb";
+            this.RequestDescriptionTb.Size = new System.Drawing.Size(135, 96);
+            this.RequestDescriptionTb.TabIndex = 23;
+            this.RequestDescriptionTb.Text = "";
             // 
-            // listBox2
+            // ReqStatusListBox
             // 
-            this.listBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.listBox2.Font = new System.Drawing.Font("Lucida Bright", 8.25F);
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 14;
-            this.listBox2.Items.AddRange(new object[] {
+            this.ReqStatusListBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ReqStatusListBox.Font = new System.Drawing.Font("Lucida Bright", 8.25F);
+            this.ReqStatusListBox.FormattingEnabled = true;
+            this.ReqStatusListBox.ItemHeight = 14;
+            this.ReqStatusListBox.Items.AddRange(new object[] {
             "Not Started",
             "",
             "In Progress",
@@ -294,13 +300,21 @@
             "On Hold",
             "",
             "Cancelled"});
-            this.listBox2.Location = new System.Drawing.Point(633, 191);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 88);
-            this.listBox2.TabIndex = 25;
+            this.ReqStatusListBox.Location = new System.Drawing.Point(633, 191);
+            this.ReqStatusListBox.Name = "ReqStatusListBox";
+            this.ReqStatusListBox.Size = new System.Drawing.Size(120, 88);
+            this.ReqStatusListBox.TabIndex = 25;
+            // 
+            // ReqDateTimePicker
+            // 
+            this.ReqDateTimePicker.Location = new System.Drawing.Point(462, 191);
+            this.ReqDateTimePicker.Name = "ReqDateTimePicker";
+            this.ReqDateTimePicker.Size = new System.Drawing.Size(165, 20);
+            this.ReqDateTimePicker.TabIndex = 26;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -314,24 +328,63 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Wheat;
             this.label1.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(63, 42);
+            this.label1.Location = new System.Drawing.Point(10, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(706, 42);
+            this.label1.Size = new System.Drawing.Size(567, 56);
             this.label1.TabIndex = 1;
             this.label1.Text = resources.GetString("label1.Text");
             // 
-            // dateTimePicker1
+            // groupBox1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(462, 191);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(165, 20);
-            this.dateTimePicker1.TabIndex = 26;
+            this.groupBox1.BackColor = System.Drawing.Color.CadetBlue;
+            this.groupBox1.Controls.Add(this.SubmitRequestButton);
+            this.groupBox1.Controls.Add(this.ClearButton);
+            this.groupBox1.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(607, 23);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(181, 111);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Submit the issue and return to Main Menu";
+            // 
+            // SubmitRequestButton
+            // 
+            this.SubmitRequestButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SubmitRequestButton.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitRequestButton.Location = new System.Drawing.Point(19, 34);
+            this.SubmitRequestButton.Name = "SubmitRequestButton";
+            this.SubmitRequestButton.Size = new System.Drawing.Size(134, 32);
+            this.SubmitRequestButton.TabIndex = 4;
+            this.SubmitRequestButton.Text = "Submit Request";
+            this.SubmitRequestButton.UseVisualStyleBackColor = false;
+            this.SubmitRequestButton.Click += new System.EventHandler(this.SubmitReqButton_Click);
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClearButton.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButton.Location = new System.Drawing.Point(19, 72);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(134, 33);
+            this.ClearButton.TabIndex = 6;
+            this.ClearButton.Text = "Clear ";
+            this.ClearButton.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(17, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 56);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Search/View Services requested";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // ServiceReqStatusForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Name = "ServiceReqStatusForm";
@@ -340,6 +393,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,10 +417,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.RichTextBox RequestLocationTB;
+        private System.Windows.Forms.ListBox ServiceReqCategorySelectionListBox;
+        private System.Windows.Forms.RichTextBox RequestDescriptionTb;
+        private System.Windows.Forms.ListBox ReqStatusListBox;
+        private System.Windows.Forms.DateTimePicker ReqDateTimePicker;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button SubmitRequestButton;
+        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.Button button1;
     }
 }

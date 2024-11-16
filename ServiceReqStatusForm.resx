@@ -118,7 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label1.Text" xml:space="preserve">
-    <value>Requesting a service means you are able to enter what municiple service you need to be fullfiled as a community memeber. 
+    <value>Requesting a service means:
+You are able to enter what municiple service you need to be fullfiled as a community memeber. 
 Make sure to enter details about what kind of service is needed for your areas. 
 You are able to view the progress of your requestt by tapping on the 'Service request progress' tab. </value>
   </data>
