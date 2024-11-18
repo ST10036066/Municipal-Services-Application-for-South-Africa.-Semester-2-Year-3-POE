@@ -92,8 +92,7 @@ namespace Municipal_Services_Application_for_South_Africa
             // Create a queue and optionally populate it with data
             Queue<Dictionary<DateTime, string>> eventQueue = new Queue<Dictionary<DateTime, string>>();
 
-            // Optionally, add sample data to the queue
-            eventQueue.Enqueue(new Dictionary<DateTime, string> { { DateTime.Now, "Sample Event" } });
+           
 
             // Pass the queue to the constructor
             LocalEventsAndAnnouncements localEventsForm = new LocalEventsAndAnnouncements(eventQueue)
@@ -149,17 +148,18 @@ namespace Municipal_Services_Application_for_South_Africa
             serviceReqStatusForm.Show();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             //closing the application completely
             Application.Exit();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //another option to close the application. 
             //it is easier to naviagte where to close the app instead of spending more time looking for this option therefore thee option to exit is within File option menu and Help options
             Application.Exit();
         }
     }
+    //------------------------------------------------------------------------END OF CODE------------------------------------------------------------------------------------------------------------------------------------
 }
