@@ -13,35 +13,35 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Municipal_Services_Application_for_South_Africa
 {
-   
+
     /// <summary>
-    /// 
+    /// Initializes the LocalEventsAndAnnouncements form and displays queue data.
     /// </summary>
 
     public partial class LocalEventsAndAnnouncements : Form
     {
 
-        private Queue<Dictionary<DateTime, string>> queueOfEvents;
+        private Queue<Dictionary<DateTime, string>> queueOfEvents; // Stores a queue of events as dictionaries with DateTime keys and string values
         public LocalEventsAndAnnouncements(Queue<Dictionary<DateTime, string>> queue)
         {
             InitializeComponent();
             queueOfEvents = queue;
-            DisplayQueueData(queueOfEvents);
+            DisplayQueueData(queueOfEvents); // Displays data from the event queue
 
         }
-//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-/// <summary>
-/// 
-/// </summary>
-/// <param name="queueOfEvents"></param>
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Displays event data from the queue in the list view.
+        /// </summary>
+        /// <param name="queueOfEvents">The queue containing event data.</param>
         private void DisplayQueueData(Queue<Dictionary<DateTime, string>> queueOfEvents)
         {
-            viewEventsAndAnnoucements.Items.Clear();
+            viewEventsAndAnnoucements.Items.Clear(); // Clears existing items in the list vie
 
-            // Temporarily copy the queue to avoid altering the original queue
-            var tempQueue = new Queue<Dictionary<DateTime, string>>(queueOfEvents);
+            
+            var tempQueue = new Queue<Dictionary<DateTime, string>>(queueOfEvents);// Temporarily copy the queue to avoid altering the original queue
 
-            while (tempQueue.Count > 0)
+            while (tempQueue.Count > 0) // Iterates through each dictionary in the queue and adds items to the list view
             {
                 var eventDict = tempQueue.Dequeue();
                 foreach (var entry in eventDict)
@@ -65,13 +65,11 @@ namespace Municipal_Services_Application_for_South_Africa
         {
 
         }
- //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-      /// <summary>
-      /// 
-      /// </summary>
-      /// <param name="sender"></param>
-      /// <param name="e"></param>
-        private void upcomingSearchByBtn_Click(object sender, EventArgs e)
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Handles the search button click event to search events based on criteria.
+        /// </summary>
+        private void UpcomingSearchByBtn_Click(object sender, EventArgs e)
         {
             //searching using keyword, or category selected or date chosen typed in by calling the method that deals with searching using words
 
@@ -94,11 +92,11 @@ namespace Municipal_Services_Application_for_South_Africa
             }
 
         }
- //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         /// <summary>
-        /// 
+        /// Determines the search criteria based on user input.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The selected search criteria as a string.</returns>
         private string GetSearchCriteria()
         {
             //used if statements becuase there is only two of them
@@ -106,24 +104,23 @@ namespace Municipal_Services_Application_for_South_Africa
             {
                 return "Keyword";
             }
-
-            if (searchCategoryCB.SelectedItem != null)
+            
+            if (searchCategoryCB.SelectedItem != null) // Checks if the user has selected a category
             {
                 return "Category";
             }
 
-            return "Date";
+            return "Date"; // Default to searching by date
         }
-//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="searchDate"></param>
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Searches events by a specific date and displays the results.
+        /// </summary>
         private void SearchByDate(DateTime searchDate)
         {
 
-            // Clear previous search results
-            searchResultsLB.Items.Clear();
+            
+            searchResultsLB.Items.Clear(); // Clear previous search results
 
             // Using LINQ to search for the date
             var results = from eventDict in queueOfEvents
@@ -131,40 +128,40 @@ namespace Municipal_Services_Application_for_South_Africa
                           where entry.Key.Date == searchDate.Date
                           select $"{entry.Key.ToString("yyyy-MM-dd")} : {entry.Value}";
 
-            // then adding the results to the ListBox
-            foreach (var result in results)
+            
+            foreach (var result in results) // then adding the results to the ListBox
             {
                 searchResultsLB.Items.Add(result);
             }
         }
-   //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-      /// <summary>
-      /// 
-      /// </summary>
-      /// <param name="keyword"></param>
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Searches events by a keyword and displays the results.
+        /// </summary>
         private void SearchByKeyword(string keyword)
-        {
-            searchResultsLB.Items.Clear();
+        { 
+            searchResultsLB.Items.Clear(); // Clears previous search results
 
-            var results = from eventDict in queueOfEvents
+            // Finds events containing the keyword using LINQ
+            var results = from eventDict in queueOfEvents 
                           from entry in eventDict
                           where (entry.Value.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0)
                 select $"{entry.Key.ToString("yyyy-MM-dd")} : {entry.Value}";
 
+            // Adds search results to the list box
             foreach (var result in results)
             {
                 searchResultsLB.Items.Add(result);
             }
         }
-//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-     /// <summary>
-     /// 
-     /// </summary>
-     /// <param name="option"></param>
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Searches events by a ComboBox option and displays the results.
+        /// </summary>
         private void SearchByComboBoxOption(string option)
         {
-            // Clear previous search results
-            searchResultsLB.Items.Clear();
+           
+            searchResultsLB.Items.Clear();  // Clear previous search results
 
             // Using LINQ to search using the ComboBox selection
             var results = from eventDict in queueOfEvents
@@ -172,8 +169,8 @@ namespace Municipal_Services_Application_for_South_Africa
                           where entry.Value.IndexOf(option, StringComparison.OrdinalIgnoreCase) >= 0
                           select $"{entry.Key.ToString("yyyy-MM-dd")} : {entry.Value}";
 
-            // Adding the results to the ListBox
-            foreach (var result in results)
+           
+            foreach (var result in results)  // Adding the results to the ListBox
             {
                 searchResultsLB.Items.Add(result);
             }
@@ -193,24 +190,23 @@ namespace Municipal_Services_Application_for_South_Africa
         {
             //this method is not deleted becuase whne its deleted it shows an error when trying to edit the designer
         }
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         private void viewQueueDictBTN_Click(object sender, EventArgs e)
         {
-            DisplayQueueData(queueOfEvents);
-        }
+            DisplayQueueData(queueOfEvents); // Refreshes and displays the event queue data
 
+        }
+ //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         private void button1_Click(object sender, EventArgs e)
         {
-            //clear out listbox content
-            viewEventsAndAnnoucements.ClearSelected();
+            
+            viewEventsAndAnnoucements.ClearSelected(); //clear out listbox content
 
         }
-//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         /// <summary>
-        /// 
+        /// Opens the form for adding events and hides the current form.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void ToSavingEventsandAnouc_Click(object sender, EventArgs e)
         {
             //going back to the form where an event is added
@@ -221,11 +217,11 @@ namespace Municipal_Services_Application_for_South_Africa
             //hides the current form
             this.Hide();
         }
-
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)
         {
         //this method is not deleted becuase whne its deleted it shows an error when trying to edit the designer
         }
     }
 }
-//--------------------------------------------------------------------------------------------------END OF CODE-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------END OF CODE-----------------------------------------------------------------------------------------------------------------------------------

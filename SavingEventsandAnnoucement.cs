@@ -34,8 +34,7 @@ namespace Municipal_Services_Application_for_South_Africa
     //Process upcoming events(dequeue).
     //For a priority queue, ensure that events with higher importance(such as VIP events) are processed before less important ones.
 
-    //dont know if it is good pract : event data in sorted dictionary 
-    //sorted dictionary goes to queue 
+    
 
     //sets are for the dates because :I can create a set to store unique event categories like music, education, sports. This ensures that each category only appears once
     public partial class SavingEventsandAnnoucement : Form

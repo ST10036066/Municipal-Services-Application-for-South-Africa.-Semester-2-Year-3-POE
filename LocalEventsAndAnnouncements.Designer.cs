@@ -120,7 +120,7 @@
             this.upcomingSearchByBtn.TabIndex = 7;
             this.upcomingSearchByBtn.Text = "SEARCH";
             this.upcomingSearchByBtn.UseVisualStyleBackColor = false;
-            this.upcomingSearchByBtn.Click += new System.EventHandler(this.upcomingSearchByBtn_Click);
+            this.upcomingSearchByBtn.Click += new System.EventHandler(this.UpcomingSearchByBtn_Click);
             // 
             // searchDateTimePicker1
             // 
