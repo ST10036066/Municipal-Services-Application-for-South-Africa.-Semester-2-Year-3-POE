@@ -117,6 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label6.Text" xml:space="preserve">
+    <value>STEP 5
+Choose the progress of the service delivery request. Not Started means your service hasnt been viewed yet.
+In Progress means your service is under works.Completed means your service has been addressed
+On Hold mean the service plans are paused. Cancelled means your service still has not been addressed 
+</value>
+  </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Requesting a service means:
 You are able to enter what municiple service you need to be fullfiled as a community memeber. 

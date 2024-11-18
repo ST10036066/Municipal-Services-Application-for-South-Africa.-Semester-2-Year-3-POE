@@ -61,7 +61,7 @@ namespace Municipal_Services_Application_for_South_Africa
             //user is describing the event 
 
         }
-        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         private void SubmitEventButton_Click(object sender, EventArgs e)
         {
                 string EventDescription = EventDescripRTB.Text; // The event described by the user
@@ -103,7 +103,7 @@ namespace Municipal_Services_Application_for_South_Africa
 
         }
 
-        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         /// <summary>
         /// /ValidationForUserInput helps the user to enter correct
         /// expected input. When they enter incorrect input , the user 
@@ -112,8 +112,8 @@ namespace Municipal_Services_Application_for_South_Africa
         /// </summary>
         /// <param name="message"></param>
         /// <param name="title"></param>
-        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+    
+ //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         private void ShowValidationMessage(string message, string title)
         {
             MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -180,14 +180,14 @@ namespace Municipal_Services_Application_for_South_Africa
                 MessageBox.Show("All report details are valid!", "Success, Thank you for helping yourself and the community. \n Navigate to the top right for the Main Menu", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         private void ClearFields() {
             //easy to have a clean textbox when re-typing or entering a new event
           EventDescripRTB.Clear();
             EventLocationRTB.Clear();
 
         }
-
+ //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         private void eventAndAnnoucementViewBTN_Click(object sender, EventArgs e)
         {
             //becuase I will need this queue of dictionaries for displayiing in this form
@@ -251,49 +251,8 @@ namespace Municipal_Services_Application_for_South_Africa
            SavingEventsandAnnoucement savingEventsandAnnoucement = new SavingEventsandAnnoucement();
             savingEventsandAnnoucement.Close();
         }
-        //testing
-        //        //getting input from the
-        //        string EventDescription = EventDescripRTB.Text; //the event describd by the user
-        //        string EventLocation = EventLocationRTB.Text;   //the  event location by the user
-        //        DateTime EvdateTime = EventdateTimePicker.Value; //the date of event
-
-        //        // validating input(please check line 118 and 123
-        //        ValidateInput(EventDescription, EventLocation, EventdateTimePicker);
-
-
-        //        // Combining the  inputs into a single string. Uisng a new appraoch(avoiding confusion of lots of classes etc)
-        //        string combinedEventInput = $"{EventDescription} - {EventLocation} - {EventdateTimePicker} - {EventCategorySelectionListBox}";
-
-        //        // Add the comined event Input to the dictionary, using the date as the key
-        //        //EventList.Add(EvdateTime,combinedEventInput);
-        //        //EventList.Add(EvdateTime,combinedEventInput);
-        //        //EventList[EventdateTimePicker.Value] = combinedEventInput; 
-
-        //        EventList[EventdateTimePicker.Value] =$"{EventDescription} -{EventCategorySelectionListBox}- {EventLocation}-{EvdateTime}";
-
-        //            if (!EventList.ContainsKey(EvdateTime))
-        //            {
-        //                EventList.Add(EvdateTime, combinedEventInput);
-        //                queueOfEvents.Enqueue(EventList);
-        //                MessageBox.Show("Event added successfully! On the top right you can click back to Main Menu");
-        //            }
-        //            else
-        //            {
-        //                MessageBox.Show("Unfortunately an event on this date already exists. Choose another date.");
-        //            }
-
-        //// Add the date to the SortedSet
-        //if (dateSet.Add(EvdateTime))
-        //{
-        //    //// If date was added successfully, adding the combined event details in the list
-        //    ////in the validation input method(line 105) there is a case and its condition that checks if the date is 
-        //    ////today or the past , with that and the set , there cannot be events with duplicate date. Fingers crossed
-
-        //    EventList[EvdateTime] = combinedEventInput;
-
-        //}
-        //// Clear fields after adding
-        //ClearFields();
+       
     }
     
 }
+//--------------------------------------------------------------------------------------------------END OF CODE-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

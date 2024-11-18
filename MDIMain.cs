@@ -39,7 +39,8 @@ namespace Municipal_Services_Application_for_South_Africa
         /// Configures the MenuStrip and its menu items.
         /// </summary>
         private void InitializeMenuStrip()
-        {
+        { 
+            
             // Create a MenuStrip
             MenuStrip navigationMenuStrip = new MenuStrip();
 
@@ -48,7 +49,7 @@ namespace Municipal_Services_Application_for_South_Africa
             navigationMenuStrip.Items.Add(CreateMenuItem("Saving Events and Announcement", OpenSavingEventsAndAnnouncement));
             navigationMenuStrip.Items.Add(CreateMenuItem("Main Menu", OpenMainMenu));
             navigationMenuStrip.Items.Add(CreateMenuItem("Report Issues", OpenReportIssues));
-            navigationMenuStrip.Items.Add(CreateMenuItem("Service Request Status", OpenServiceReqStatus));
+            navigationMenuStrip.Items.Add(CreateMenuItem("Service Request ", OpenServiceReqStatus));
 
             // Add the MenuStrip to the form
             this.MainMenuStrip = navigationMenuStrip;
@@ -64,7 +65,7 @@ namespace Municipal_Services_Application_for_South_Africa
         }
 
         /// <summary>
-        /// Closes the currently active child form.
+        /// Closes the currently active child form to avoid a puzzle of multiple forms open.
         /// </summary>
         private void CloseActiveChildForm()
         {
@@ -121,7 +122,7 @@ namespace Municipal_Services_Application_for_South_Africa
         /// </summary>
         private void OpenMainMenu(object sender, EventArgs e)
         {
-            CloseActiveChildForm();
+            CloseActiveChildForm(); // Close the currently active child form
             MainMenuForm mainMenuForm = new MainMenuForm { MdiParent = this };
             mainMenuForm.Show();
         }
@@ -131,7 +132,7 @@ namespace Municipal_Services_Application_for_South_Africa
         /// </summary>
         private void OpenReportIssues(object sender, EventArgs e)
         {
-            CloseActiveChildForm();
+            CloseActiveChildForm(); // Close the currently active child form
             ReportIssuesForm reportIssuesForm = new ReportIssuesForm { MdiParent = this };
             reportIssuesForm.Show();
         }
@@ -143,9 +144,22 @@ namespace Municipal_Services_Application_for_South_Africa
         /// </summary>
         private void OpenServiceReqStatus(object sender, EventArgs e)
         {
-            CloseActiveChildForm();
+            CloseActiveChildForm(); // Close the currently active child form
             ServiceReqStatusForm serviceReqStatusForm = new ServiceReqStatusForm { MdiParent = this };
             serviceReqStatusForm.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //closing the application completely
+            Application.Exit();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //another option to close the application. 
+            //it is easier to naviagte where to close the app instead of spending more time looking for this option therefore thee option to exit is within File option menu and Help options
+            Application.Exit();
         }
     }
 }

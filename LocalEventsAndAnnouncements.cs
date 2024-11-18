@@ -13,25 +13,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Municipal_Services_Application_for_South_Africa
 {
-    //use a sorted dictionary , maintain a sorted order of keys while iterating, going with SortedDictionary
-    //for fast look ups , considered using Hash tables 
-
-//    Upon selecting "Local Events and Announcements," create a Windows Form with the
-//following features: - Display upcoming local events and announcements in an aesthetically pleasing manner. - Implement a search functionality allowing users to efficiently find events based on
-//categories and dates. - Utilise advanced data structures, such as sorted dictionaries, to optimise event 
-//organisation.
-
-//    Stacks, Queues, Priority Queues(15 Marks): 
-// Implement stacks, queues, or priority queues as needed to manage event-related data
-//structures effectively. 
-
-//Hash Tables, Dictionaries, Sorted Dictionaries (15 Marks): 
-// Utilise hash tables, dictionaries, or sorted dictionaries for organising and retrieving event 
-//information. 
-
-//Sets (10 Marks): 
-// Incorporate sets to handle unique categories or dates efficiently. 
-
+   
+    /// <summary>
+    /// 
+    /// </summary>
 
     public partial class LocalEventsAndAnnouncements : Form
     {
@@ -44,7 +29,11 @@ namespace Municipal_Services_Application_for_South_Africa
             DisplayQueueData(queueOfEvents);
 
         }
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/// <summary>
+/// 
+/// </summary>
+/// <param name="queueOfEvents"></param>
         private void DisplayQueueData(Queue<Dictionary<DateTime, string>> queueOfEvents)
         {
             viewEventsAndAnnoucements.Items.Clear();
@@ -64,19 +53,24 @@ namespace Municipal_Services_Application_for_South_Africa
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            //this method is not deleted becuase whne its deleted it shows an error when trying to edit the designer
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            //this method is not deleted becuase whne its deleted it shows an error when trying to edit the designer
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
-
+ //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="sender"></param>
+      /// <param name="e"></param>
         private void upcomingSearchByBtn_Click(object sender, EventArgs e)
         {
             //searching using keyword, or category selected or date chosen typed in by calling the method that deals with searching using words
@@ -100,6 +94,11 @@ namespace Municipal_Services_Application_for_South_Africa
             }
 
         }
+ //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private string GetSearchCriteria()
         {
             //used if statements becuase there is only two of them
@@ -115,6 +114,11 @@ namespace Municipal_Services_Application_for_South_Africa
 
             return "Date";
         }
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+       /// <summary>
+       /// 
+       /// </summary>
+       /// <param name="searchDate"></param>
         private void SearchByDate(DateTime searchDate)
         {
 
@@ -133,7 +137,11 @@ namespace Municipal_Services_Application_for_South_Africa
                 searchResultsLB.Items.Add(result);
             }
         }
-
+   //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="keyword"></param>
         private void SearchByKeyword(string keyword)
         {
             searchResultsLB.Items.Clear();
@@ -148,7 +156,11 @@ namespace Municipal_Services_Application_for_South_Africa
                 searchResultsLB.Items.Add(result);
             }
         }
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     /// <summary>
+     /// 
+     /// </summary>
+     /// <param name="option"></param>
         private void SearchByComboBoxOption(string option)
         {
             // Clear previous search results
@@ -166,14 +178,20 @@ namespace Municipal_Services_Application_for_South_Africa
                 searchResultsLB.Items.Add(result);
             }
         }
+ //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+       /// <summary>
+       /// 
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
+            //this method is not deleted becuase whne its deleted it shows an error when trying to edit the designer
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            //this method is not deleted becuase whne its deleted it shows an error when trying to edit the designer
         }
 
         private void viewQueueDictBTN_Click(object sender, EventArgs e)
@@ -187,7 +205,12 @@ namespace Municipal_Services_Application_for_South_Africa
             viewEventsAndAnnoucements.ClearSelected();
 
         }
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ToSavingEventsandAnouc_Click(object sender, EventArgs e)
         {
             //going back to the form where an event is added
@@ -201,9 +224,8 @@ namespace Municipal_Services_Application_for_South_Africa
 
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //exiting app
-
-            //back to main menu 
+        //this method is not deleted becuase whne its deleted it shows an error when trying to edit the designer
         }
     }
 }
+//--------------------------------------------------------------------------------------------------END OF CODE-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

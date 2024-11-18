@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocalEventsAndAnnouncements));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.searchResultsLB = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.upcomingSearchByBtn = new System.Windows.Forms.Button();
             this.searchDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -51,7 +52,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.label8 = new System.Windows.Forms.Label();
-            this.searchResultsLB = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -64,10 +64,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 158);
+            this.tabControl1.Location = new System.Drawing.Point(0, 181);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(752, 280);
+            this.tabControl1.Size = new System.Drawing.Size(926, 318);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -79,9 +79,17 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(744, 254);
+            this.tabPage1.Size = new System.Drawing.Size(918, 292);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Seearch Local Events and Announcements";
+            // 
+            // searchResultsLB
+            // 
+            this.searchResultsLB.FormattingEnabled = true;
+            this.searchResultsLB.Location = new System.Drawing.Point(252, 10);
+            this.searchResultsLB.Name = "searchResultsLB";
+            this.searchResultsLB.Size = new System.Drawing.Size(658, 277);
+            this.searchResultsLB.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -185,7 +193,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(744, 254);
+            this.tabPage2.Size = new System.Drawing.Size(918, 292);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "View Events and announcements";
             // 
@@ -194,7 +202,7 @@
             this.groupBox2.Controls.Add(this.viewQueueDictBTN);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.ToSavingEventsandAnouc);
-            this.groupBox2.Location = new System.Drawing.Point(418, 97);
+            this.groupBox2.Location = new System.Drawing.Point(562, 32);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(320, 107);
             this.groupBox2.TabIndex = 3;
@@ -239,7 +247,7 @@
             this.viewEventsAndAnnoucements.FormattingEnabled = true;
             this.viewEventsAndAnnoucements.Location = new System.Drawing.Point(6, 18);
             this.viewEventsAndAnnoucements.Name = "viewEventsAndAnnoucements";
-            this.viewEventsAndAnnoucements.Size = new System.Drawing.Size(406, 199);
+            this.viewEventsAndAnnoucements.Size = new System.Drawing.Size(529, 264);
             this.viewEventsAndAnnoucements.TabIndex = 0;
             // 
             // menuStrip1
@@ -248,7 +256,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(926, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -296,20 +304,12 @@
             this.label8.Text = "Click on Help to check out\r\nhow the Search By feature is useful \r\nfor  finding sp" +
     "ecific events or announcements";
             // 
-            // searchResultsLB
-            // 
-            this.searchResultsLB.FormattingEnabled = true;
-            this.searchResultsLB.Location = new System.Drawing.Point(239, 12);
-            this.searchResultsLB.Name = "searchResultsLB";
-            this.searchResultsLB.Size = new System.Drawing.Size(489, 238);
-            this.searchResultsLB.TabIndex = 1;
-            // 
             // LocalEventsAndAnnouncements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(926, 522);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -318,6 +318,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "LocalEventsAndAnnouncements";
             this.Text = "Local Events And Announcements";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
