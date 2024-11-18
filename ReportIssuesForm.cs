@@ -201,16 +201,7 @@ namespace Municipal_Services_Application_for_South_Africa
                     MessageBox.Show(Validation, "Invalid Location", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
 
-                case bool _ when Location.Length < 5:
-                    Validation = "Location must be at least 5 characters long. Try this: enter the area or the street location or both";
-                    MessageBox.Show(Validation, "Invalid Location", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    break;
-
-
-                //case bool _ when Category.SelectedIndex == -1: // No item selected
-                //    Validation = "It seems like you did not choose a category. \n Try this: Tap the Category box under step 2 (e.g., Water & Sanitation).";
-                //    MessageBox.Show(Validation, "Invalid Category chosen", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //    break;
+               
                 case bool _ when string.IsNullOrEmpty(Category):
                     Validation = "It seems like you did not choose a category. \n Try this: Tap the Category box under step 2 (e.g., Water & Sanitation).";
                     MessageBox.Show(Validation, "Invalid Category chosen", MessageBoxButtons.OK, MessageBoxIcon.Warning);

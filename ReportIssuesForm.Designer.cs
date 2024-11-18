@@ -68,7 +68,7 @@
             this.LocationInputTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.LocationInputTextBox.Location = new System.Drawing.Point(6, 190);
             this.LocationInputTextBox.Name = "LocationInputTextBox";
-            this.LocationInputTextBox.Size = new System.Drawing.Size(94, 20);
+            this.LocationInputTextBox.Size = new System.Drawing.Size(92, 20);
             this.LocationInputTextBox.TabIndex = 0;
             this.LocationInputTextBox.TextChanged += new System.EventHandler(this.LocationInputTextBox_TextChanged);
             // 
@@ -86,9 +86,9 @@
             "Health ",
             "Education",
             "Public Safety"});
-            this.CategorySelectionListBox.Location = new System.Drawing.Point(109, 190);
+            this.CategorySelectionListBox.Location = new System.Drawing.Point(107, 190);
             this.CategorySelectionListBox.Name = "CategorySelectionListBox";
-            this.CategorySelectionListBox.Size = new System.Drawing.Size(103, 32);
+            this.CategorySelectionListBox.Size = new System.Drawing.Size(101, 32);
             this.CategorySelectionListBox.TabIndex = 1;
             this.CategorySelectionListBox.SelectedIndexChanged += new System.EventHandler(this.CategorySelectionListBox_SelectedIndexChanged);
             // 
@@ -98,7 +98,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DescriptionBoxRichTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.DescriptionBoxRichTextBox.Location = new System.Drawing.Point(221, 190);
+            this.DescriptionBoxRichTextBox.Location = new System.Drawing.Point(217, 190);
             this.DescriptionBoxRichTextBox.Name = "DescriptionBoxRichTextBox";
             this.DescriptionBoxRichTextBox.Size = new System.Drawing.Size(182, 52);
             this.DescriptionBoxRichTextBox.TabIndex = 2;
@@ -112,7 +112,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MediaAttachmentDialogButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.MediaAttachmentDialogButton.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MediaAttachmentDialogButton.Location = new System.Drawing.Point(412, 190);
+            this.MediaAttachmentDialogButton.Location = new System.Drawing.Point(408, 190);
             this.MediaAttachmentDialogButton.Name = "MediaAttachmentDialogButton";
             this.MediaAttachmentDialogButton.Size = new System.Drawing.Size(146, 52);
             this.MediaAttachmentDialogButton.TabIndex = 3;
@@ -134,7 +134,7 @@
             // 
             // EngagementFeatureProgressBar
             // 
-            this.EngagementFeatureProgressBar.Location = new System.Drawing.Point(567, 146);
+            this.EngagementFeatureProgressBar.Location = new System.Drawing.Point(563, 146);
             this.EngagementFeatureProgressBar.Name = "EngagementFeatureProgressBar";
             this.EngagementFeatureProgressBar.Size = new System.Drawing.Size(99, 23);
             this.EngagementFeatureProgressBar.TabIndex = 5;
@@ -161,7 +161,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.36364F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
             this.tableLayoutPanel1.Controls.Add(this.CategoryListBoxLabel, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 3, 1);
@@ -191,9 +191,9 @@
             this.CategoryListBoxLabel.AutoSize = true;
             this.CategoryListBoxLabel.BackColor = System.Drawing.Color.CadetBlue;
             this.CategoryListBoxLabel.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryListBoxLabel.Location = new System.Drawing.Point(109, 149);
+            this.CategoryListBoxLabel.Location = new System.Drawing.Point(107, 149);
             this.CategoryListBoxLabel.Name = "CategoryListBoxLabel";
-            this.CategoryListBoxLabel.Size = new System.Drawing.Size(103, 28);
+            this.CategoryListBoxLabel.Size = new System.Drawing.Size(101, 28);
             this.CategoryListBoxLabel.TabIndex = 1;
             this.CategoryListBoxLabel.Text = "Select Issue Category:";
             this.CategoryListBoxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -204,7 +204,7 @@
             this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label5.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(221, 3);
+            this.label5.Location = new System.Drawing.Point(217, 3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(182, 114);
             this.label5.TabIndex = 12;
@@ -219,7 +219,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.CadetBlue;
             this.label4.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(412, 149);
+            this.label4.Location = new System.Drawing.Point(408, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 28);
             this.label4.TabIndex = 3;
@@ -237,7 +237,7 @@
             this.label1.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 137);
+            this.label1.Size = new System.Drawing.Size(92, 137);
             this.label1.TabIndex = 10;
             this.label1.Text = "STEP 1: Location\r\nWhat to Do: In the “Location” text box,\r\n type the address or l" +
     "ocation where the issue has occurred.\r\nExample: \"123 Elm Street\" or \"Near Centra" +
@@ -252,7 +252,7 @@
             this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(412, 3);
+            this.label7.Location = new System.Drawing.Point(408, 3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(146, 137);
             this.label7.TabIndex = 13;
@@ -267,7 +267,7 @@
             this.LocationInputLabel.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LocationInputLabel.Location = new System.Drawing.Point(6, 143);
             this.LocationInputLabel.Name = "LocationInputLabel";
-            this.LocationInputLabel.Size = new System.Drawing.Size(94, 41);
+            this.LocationInputLabel.Size = new System.Drawing.Size(92, 41);
             this.LocationInputLabel.TabIndex = 0;
             this.LocationInputLabel.Text = "Enter the location where the issue found: ";
             this.LocationInputLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -278,9 +278,9 @@
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(109, 3);
+            this.label2.Location = new System.Drawing.Point(107, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 137);
+            this.label2.Size = new System.Drawing.Size(100, 137);
             this.label2.TabIndex = 11;
             this.label2.Text = "STEP 2\r\nWhat to Do: choose the appropriate category for your issue.\r\nNote: Make s" +
     "ure to select a category from the list.";
@@ -291,7 +291,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.CadetBlue;
             this.label3.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(221, 156);
+            this.label3.Location = new System.Drawing.Point(217, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 14);
             this.label3.TabIndex = 2;
@@ -304,9 +304,9 @@
             this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label9.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(567, 3);
+            this.label9.Location = new System.Drawing.Point(563, 3);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(182, 86);
+            this.label9.Size = new System.Drawing.Size(187, 72);
             this.label9.TabIndex = 14;
             this.label9.Text = "In the meantime, look below to track your progress of reporting. \r\nYou are doing " +
     "a great job by helping better our communities.Thank you!";
